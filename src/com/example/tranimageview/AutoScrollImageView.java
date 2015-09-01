@@ -68,6 +68,7 @@ public class AutoScrollImageView extends ImageView {
                 float heightScale = viewHeight / drawableHeight;
                 scale = Math.max(widthScale, heightScale);
                 matrix.postScale(scale, scale);
+                setImageMatrix(matrix);
                 getViewTreeObserver().removeGlobalOnLayoutListener(this);
             }
         });
